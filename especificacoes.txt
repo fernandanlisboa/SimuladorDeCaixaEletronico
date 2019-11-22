@@ -1,0 +1,29 @@
+					Simulador de Caixa Eletrônico
+		ESPECIFICAÇÕES	
+
+
+	funcões:
+ - sacar;
+ - depositar;
+ - transferir;
+ - configurações da conta:
+   - mudar senha;
+   - criar nova conta;
+   - imprimir codigo;
+   - remover conta;
+  
+
+	estruturas:
+ - Typedef Struct CONTA:
+   - string nome; (pessoa a qual pertence)
+   - string conta;
+   - string agência;
+   - string valor; (quantidade de dinheiro que há)
+ - LISTA do tipo CONTA com as contas existentes;
+   - grava em um arquivo .txt;
+   - como passar novas informações do arquivo .txt para a lista? [DÚVIDA]
+	-sobreescreve;
+	-quando alterar os dados diretamente no arquivo, colocar na lista;
+   
+
+
