@@ -21,16 +21,6 @@ list <CONTA> Contas;
 
 CONTA criarConta(string nome, string agencia, string conta, string valor, string senha);
 
-//criando contas
-CONTA c1, c2, c3, c4;
-c1 = criarConta("Fernanda Lisboa", "30202-2", "2110-4", "300,00", "010101", );
-Contas.push_back(c1);
-c2 = criarConta("Lucia Cristina", "33245-0", "2110-4", "100,00", "10101" );
-Contas.push_back(c2);
-c3 = criarConta("Juliana Oliveira", "34566-9", "2304-8", "200,00", "202020"); 
-Contas.push_back(c3);
-c4 = criarConta("Maria Oliveira", "38766-8", "2323-3", "110,00", "102030");
-Contas.push_back(c4);
 
 
 /////////////////////////////////////////////////////////////////funcoes
@@ -52,12 +42,12 @@ string sorteiaAg(){
 	srand(time(NULL));
 	int numero1 = 1000 + rand() % (1000 - 9000 + 1);
 	int numero2 = ( rand() % 9 ) + 1;
-	string ag = to_string(numero1); 
+	string ag = to_string(1000 + rand() % (1000 - 9000 + 1)); 
 	ag += "-" + to_string(numero2);
 	return ag;
 }
 
-string sorteiaConta(string ag){
+string sorteiaConta(string ag, string conta){
 	srand(time(NULL));
 	do{
 		int numero1 = 10000 + rand() % (10000 - 90000 + 1);
@@ -147,7 +137,7 @@ void sacar(CONTA a, string valor){
 	
 }
 
-
+/*
 bool busca(fstream arquivo, string ag, string conta){ //busca no arquivo
 	arquivo.open("contas.txt", ios :: in);
 	string palavras;
@@ -169,7 +159,7 @@ bool busca(fstream arquivo, string ag, string conta){ //busca no arquivo
 		return true;
 	}	
 	arquivo.close();
-}
+}*/
 
 bool existe_na_lista(string ag, string conta){
 	list<CONTA>:: iterator it;
